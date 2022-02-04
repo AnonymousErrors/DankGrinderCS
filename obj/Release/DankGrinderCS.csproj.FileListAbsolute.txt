@@ -1,9 +1,0 @@
-C:\Users\RA\source\repos\DankGrinderCS\bin\Release\DankGrinderCS.exe.config
-C:\Users\RA\source\repos\DankGrinderCS\bin\Release\DankGrinderCS.exe
-C:\Users\RA\source\repos\DankGrinderCS\bin\Release\DankGrinderCS.pdb
-C:\Users\RA\source\repos\DankGrinderCS\bin\Release\Newtonsoft.Json.dll
-C:\Users\RA\source\repos\DankGrinderCS\bin\Release\Newtonsoft.Json.xml
-C:\Users\RA\source\repos\DankGrinderCS\obj\Release\DankGrinderCS.csproj.CoreCompileInputs.cache
-C:\Users\RA\source\repos\DankGrinderCS\obj\Release\DankGrinderCS.csproj.CopyComplete
-C:\Users\RA\source\repos\DankGrinderCS\obj\Release\DankGrinderCS.exe
-C:\Users\RA\source\repos\DankGrinderCS\obj\Release\DankGrinderCS.pdb
