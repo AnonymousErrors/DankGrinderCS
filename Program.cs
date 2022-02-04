@@ -25,7 +25,7 @@ namespace DankGrinderCS
             client.DefaultRequestHeaders.Add("Accept-Language", "en-US");
             client.DefaultRequestHeaders.Add("Authorization", token);
             client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) discord/0.0.309 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36");
-            
+
             // SSL Certificate Bypass
             System.Net.ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
             // start the farm

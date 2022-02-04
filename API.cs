@@ -20,14 +20,14 @@ namespace DankGrinderCS
         /// <param name="request_url"></param>
         /// <param name="body"></param>
         /// <returns> Returns a HttpResponseMessage </returns>
-        async static public Task<HttpResponseMessage> send_request(HttpClient client, string method,string request_url, HttpContent body = null)
+        async static public Task<HttpResponseMessage> send_request(HttpClient client, string method, string request_url, HttpContent body = null)
         {
             HttpResponseMessage response = null;
             switch (method.ToUpper())
             {
                 case "GET":
                     {
-                        response = await client.GetAsync(API_URL+request_url);
+                        response = await client.GetAsync(API_URL + request_url);
                         break;
                     }
                 case "POST":
@@ -68,7 +68,7 @@ namespace DankGrinderCS
         async static public Task<JToken> getLatestMessage(HttpClient client, string channel_id, string user_id = "")
         {
             HttpResponseMessage response = await send_request(client, "GET", $"channels/{channel_id}/messages?limit=1");
-            JToken message = JsonConvert.DeserializeObject<JArray>(await response.Content.ReadAsStringAsync())[0]; 
+            JToken message = JsonConvert.DeserializeObject<JArray>(await response.Content.ReadAsStringAsync())[0];
             if (user_id != "" && user_id != message["author"]["id"].ToString())
             {
                 await Task.Delay(1000);
@@ -76,7 +76,7 @@ namespace DankGrinderCS
             }
             return JsonConvert.DeserializeObject<JArray>(await response.Content.ReadAsStringAsync()).First();
         }
-        
+
 
         /// <summary>
         /// Interaction API, still in progress, but it's enough to support highlow, search and postmeme
@@ -97,7 +97,7 @@ namespace DankGrinderCS
             "interactions",
             new StringContent(
                 request_json,
-                Encoding.UTF8, 
+                Encoding.UTF8,
                 "application/json"
                 )
             );

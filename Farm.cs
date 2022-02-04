@@ -53,7 +53,7 @@ namespace DankGrinderCS
                 await API.send_message(client, channel_id, $"pls buy { item_name } 1");
                 await Task.Delay(1000);
                 await API.send_message(client, channel_id, cmd);
-                
+
                 // get the message again
                 message = await API.getLatestMessage(client, channel_id, "270904126974590976");
             }
@@ -73,7 +73,7 @@ namespace DankGrinderCS
 
             // It's forced to work, let me know if it gets patched
             int.TryParse(embed_desc[embed_desc.Length - 3], out int number);
-            
+
             // default : higher
             int interact_with = 2;
             if (number >= 60)
@@ -118,7 +118,7 @@ namespace DankGrinderCS
             HttpResponseMessage response = await API.send_message(client, channel_id, cmd_name);
 
             Console.WriteLine($"Sent the command { cmd_name }\nResponse Code: { response.IsSuccessStatusCode } ");
-            while(!response.IsSuccessStatusCode)
+            while (!response.IsSuccessStatusCode)
                 response = await API.send_message(client, channel_id, cmd_name);
             await Task.Delay(1000);
 
